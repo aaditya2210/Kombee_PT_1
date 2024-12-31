@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\LocationController;
+use App\Http\Controllers\RoleController;
 
 Route::get('/states', [LocationController::class, 'getStates'])->name('states');
 Route::get('/cities/{state_id}', [LocationController::class, 'getCities'])->name('cities');
@@ -15,6 +16,11 @@ Route::get('/users/{id}/edit', [UserController::class, 'edit'])->name('users.edi
 Route::put('/users/{id}', [UserController::class, 'update'])->name('users.update');
 Route::delete('/users/{id}', [UserController::class, 'destroy'])->name('users.destroy');
 Route::resource('users', UserController::class);
+
+
+
+Route::resource('roles', RoleController::class);
+
 
 
 Route::get('/', function () {

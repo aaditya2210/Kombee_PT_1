@@ -17,6 +17,11 @@
                 <th>Contact Number</th>
                 <th>State_id</th>
                 <th>City_id</th>
+                <th>postcode</th>
+                <th>gender</th>
+                <th>hobbies</th>
+                <th>role</th>
+                <th>files</th>
                 <th>Actions</th>
             </tr>
         </thead>
@@ -30,6 +35,11 @@
                     <td>{{ $user->contact_number }}</td>
                     <td>{{ $user->state_id }}</td>
                     <td>{{ $user->city_id }}</td>
+                    <td>{{ $user->postcode }}</td>
+                    <td>{{ $user->gender }}</td>
+                    <td>{{ $user->hobbies }}</td>
+                    <td>{{ $user->role }}</td>
+                    <td>{{ $user->files }}</td>
                     <td>
                         <a href="{{ route('users.edit', $user->id) }}">Edit</a>
                         <form action="{{ route('users.destroy', $user->id) }}" method="POST" style="display: inline;">
